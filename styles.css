@@ -3,8 +3,16 @@
 body {
     padding: 0px;
     margin: 0px;
-    background: linear-gradient(45deg, black, gray);
+    background: linear-gradient(45deg, #ff8c00, #ff00cc, #ff0099, #cc00ff, #00ffcc, #00ccff); 
+    background-size: 300% 300%;
+    animation: gradientAnimation 6s ease infinite; 
     font-family: 'Exo 2', sans-serif;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 
 h1 {
@@ -32,6 +40,7 @@ p {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
 }
 
 .cell {
@@ -52,15 +61,18 @@ p {
 }
 
 dialog {
-    background: black;
+    background: rgba(0, 0, 0, 0.8); 
     color: orange;
     padding: 20px;
     position: relative;
-    height: 150px
+    height: 365px;
+    border-radius: 10px;
+    width: 600px;
 }
 
 .dialog-p {
     margin-top: 20px;
+    text-align: center;
 }
 
 .dialog-btn {
@@ -83,5 +95,5 @@ button {
 button:hover {
     background: transparent;
     color: orange;
-    pointer: cursor;
+    cursor: pointer;
 }
