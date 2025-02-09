@@ -1,12 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&display=swap');
+
 body {
     padding: 0px;
     margin: 0px;
-    background-color: white;
+    background: linear-gradient(45deg, black, gray);
+    font-family: 'Exo 2', sans-serif;
 }
 
 h1 {
     text-align: center;
-    color: rgb(66, 64, 219) !important;
+    font-size: 50px;
+    color: orange !important;
+    margin-bottom: 20px;
+}
+
+li {
+    color: orange;
+    font-size: 20px;
+    margin-top: -20px
+}
+
+p {
+    color: white;
+    font-size: 20px;
+    margin-top: -20px
 }
 
 .page {
@@ -20,9 +37,9 @@ h1 {
 .cell {
     width: 60px;
     height: 60px;
-
-    border: 2px solid black;
-    border-radius: 5px;
+    border: 2px solid orange;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
 .main-grid {
@@ -32,4 +49,39 @@ h1 {
     gap: 10px;
     justify-content: center;
     margin-bottom: 20px;
+}
+
+dialog {
+    background: black;
+    color: orange;
+    padding: 20px;
+    position: relative;
+    height: 150px
+}
+
+.dialog-p {
+    margin-top: 20px;
+}
+
+.dialog-btn {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%)
+}
+
+button {
+    padding: 7px 25px;
+    font-size: 18px;
+    color: black;
+    background: orange;
+    border: 2px solid orange;
+    border-radius: 10px;
+    margin: 10px auto;
+    transition: all ease 0.3s;
+}
+
+button:hover {
+    background: transparent;
+    color: orange;
+    pointer: cursor;
 }
